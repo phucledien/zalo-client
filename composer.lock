@@ -1,0 +1,60 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "81ba0a38b123a3eaa341cca056792f2e",
+    "packages": [
+        {
+            "name": "phucledien/php-zalo-sdk",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phucledien/php-zalo-sdk.git",
+                "reference": "a46df98c1683559936de3408e49e2acea0fe8547"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phucledien/php-zalo-sdk/zipball/a46df98c1683559936de3408e49e2acea0fe8547",
+                "reference": "a46df98c1683559936de3408e49e2acea0fe8547",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Zalo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "phucledien",
+                    "email": "ahphuczpro@gmail.com"
+                }
+            ],
+            "description": "sdk for zalo developers",
+            "keywords": [
+                "phucledien",
+                "sdk",
+                "zalo",
+                "zalosdk"
+            ],
+            "time": "2018-04-23T09:55:27+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

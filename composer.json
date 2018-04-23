@@ -1,0 +1,5 @@
+{
+    "require": {
+        "phucledien/php-zalo-sdk": "^1.0"
+    }
+}
