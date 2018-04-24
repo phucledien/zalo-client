@@ -22,7 +22,7 @@ class ZaloClient {
 
         $params = ['data' => $data];
 
-        return $followerIds = $this->zalo->get('/getfollowers', $params)->getDecodedBody()['data']['followers'];
+        return $followerIds = $this->zalo->get(ZaloEndpoint::API_OA_GET_FOLLOWERS_LIST, $params)->getDecodedBody()['data']['followers'];
     }
 
     /** send message to all follower
