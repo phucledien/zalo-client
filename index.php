@@ -23,4 +23,15 @@ $zaloClient = new ZaloClient(new ZaloConfig(
     ZALO_OA_ID_CFG,
     ZALO_OA_SECRET_KEY_CFG));
 
+/** gets follower
+ * 
+*/
 $zaloClient->sendMessageToAll("ABC");
+
+/** tạo mới sản phẩm
+ *  $filePath: đường dẫn đến ảnh (kích thước tối thểu là 500*500)
+ *  $name: tên sản phẩm
+ * 
+ * 
+ */
+$zaloClient->createProduct("a.jpg", "sda");
