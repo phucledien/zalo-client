@@ -54,7 +54,7 @@ class ZaloClient {
 
         $params = ['file' => new ZaloFile($filePath)];
         $response = $this->zalo->post(ZaloEndpoint::API_OA_STORE_UPLOAD_PRODUCT_PHOTO, $params);
-        return $result = $response->getDecodedBody();
+        return $result = $response->getDecodedBody()['data']['imageId'];     
         
     }
 
@@ -62,33 +62,26 @@ class ZaloClient {
      * $filePath
      * $name
      */
-    public function createProduct($filePaths,$name){
-
-        // $cate = array('cateid' => 'put_your_cate_id_here');
-        // $cates = [$cate];
-        // $photo = array('id' => 'put_your_image_id_here');
-        // $photos = [$photo];
-        $photos=[];
-        var_dump($this->uploadPhoto($filePaths));
-        die();
-        foreach($filePaths as $filePath){
-            
-            $photos[]=uploadPhoto($filePath);
-            
+    public function createProduct($cates,$filePaths,$name,$desc,$code,$price,$display,$payment){
+        if (is_array($filePaths))
+        {
+            foreach($filePaths as $filePath){      
+                $photo=array('id'=>$this->uploadPhoto($filePath));
+                $photos = [$photo];
+            }
         }
-        $data = array(
-            'cateids' => $cates,
-            'name' => 'put_your_product_name_here',
-            'desc' => 'put_your_description_here',
-            'code' => 'put_your_code_number_here',
+        $data = array(  
+            'cateids' => $cates,                
+            'name' => 'test',
+            'desc' => 'put your description here',
+            'code' => '123',
             'price' => 15000,
             'photos' => $photos,
             'display' => 'show', // show | hide
             'payment' => 2 // 2 - enable | 3 - disable
         );
         $params = ['data' => $data];
-        $response = $zalo->post(ZaloEndpoint::API_OA_STORE_CREATE_PRODUCT, $params);
-        $result = $response->getDecodedBody(); // result
-
+        $response = $this->zalo->post(ZaloEndpoint::API_OA_STORE_CREATE_PRODUCT, $params);
+        return $result = $response->getDecodedBody(); // result 
     }
 }
