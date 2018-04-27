@@ -23,4 +23,4 @@ $zaloClient = new ZaloClient(new ZaloConfig(
     ZALO_OA_ID_CFG,
     ZALO_OA_SECRET_KEY_CFG));
 
-$zaloClient->sendMessageToAll("ABC");
+$zaloClient->broadcast("demo");
