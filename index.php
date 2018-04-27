@@ -31,9 +31,8 @@ $zaloClient = new ZaloClient(new ZaloConfig(
 /** tạo mới sản phẩm
  *  $filePath: đường dẫn đến ảnh (kích thước tối thểu là 500*500)
  *  $name: tên sản phẩm
- * 
+ *  $
  * 
  */
 $filePaths=[];
-$filePaths[0]="D:/Downloads/Image/lock screen/23.jpg";
-$zaloClient->createProduct($cates,$filePaths,$name,$desc,$code,$price,$display,$payment);
+$zaloClient->createProduct($cateids,$name,$desc,$code,$price,$filePaths,$display,$payment);
